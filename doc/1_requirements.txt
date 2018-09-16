@@ -1,0 +1,17 @@
+Assessment
+1. What’s your proudest achievement? This can be a personal project or something you’ve worked on
+professionally. Just a short paragraph is fine, but we would love to know why you’re proud of it.
+
+2. Tell us about a technical book or article you read recently, why you liked it, and why I should read it.
+
+3. Write a small java program, based on the spring stack, to simulate a single set of traffic lights, along
+with state transitions. The state transition should happen automatically every two seconds. To
+display the state, you can use log4j statements or other means. Please include a test suite and treat
+as if this is production code.
+
+4. Write a simple HTML page a single button and 3 divs, red, orange and green. User clicking the
+button, steps through the traffic light sequence by changing the brightness of the divs so it behaves
+like a traffic light. Try to make it pretty 
+
+5. Enhance solution from 3 "traffic lights" to operate from an in-memory database, for example H2.
+The enhanced program should include a programmable duration of light phases based on
