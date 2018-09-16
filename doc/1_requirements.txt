@@ -15,3 +15,7 @@ like a traffic light. Try to make it pretty
 
 5. Enhance solution from 3 "traffic lights" to operate from an in-memory database, for example H2.
 The enhanced program should include a programmable duration of light phases based on
+
+Note: You can complete either Question 4 or 5 above, if you lean more towards front end development or
+backend development, or you complete both if you feel equally proficient. We won’t hold it against you
+either way.
