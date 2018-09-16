@@ -1,0 +1,11 @@
+/logs
+sourcecode/trafficlights/target/archive*
+sourcecode/trafficlights/target/classes
+sourcecode/trafficlights/target/generated*
+sourcecode/trafficlights/target/maven*
+sourcecode/trafficlights/target/surefire*
+sourcecode/trafficlights/target/test*
+sourcecode/trafficlights/target/logs
+sourcecode/trafficlights/.settings/
+sourcecode/trafficlights/.classpath
+sourcecode/trafficlights//.project
