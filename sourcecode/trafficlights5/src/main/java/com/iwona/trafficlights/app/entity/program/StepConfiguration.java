@@ -19,7 +19,7 @@ public class StepConfiguration {
 
 	@Column(name = "STEP_ID")
 	private Integer stepId;
-	@Column(name = "SEMAFOR_TYPE_ID")
+	@Column(name = "SEMAPHORE_TYPE_ID")
 	private Integer semaphoreTypeId;
 	@Column(name = "COLOUR_ID")
 	private Integer colourId;
