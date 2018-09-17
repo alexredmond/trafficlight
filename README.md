@@ -10,7 +10,6 @@ jdbc:h2:tcp://localhost/c:/iwona/trafficlight/h2_database/globoforce
 Otherwise application.properties needs to be modified and application repacked
 ### Run
 To run application, start database first, then run app. 
-
-See output in logs folder.
   - 1_runDatabase.bat
   - 2_runTrafficLightsApp.bat
+See output in logs folder.

@@ -1,4 +1,4 @@
-package com.iwona.trafficlights.app.dto.semafor;
+package com.iwona.trafficlights.app.dto.semaphore;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -9,11 +9,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.iwona.trafficlights.app.dto.colour.LightColour;
-import com.iwona.trafficlights.app.scheduler.SemaforWatch;
+import com.iwona.trafficlights.app.scheduler.SemaphoreWatch;
 
-public abstract class Semafor implements PropertyChangeListener {
+public abstract class Semaphore implements PropertyChangeListener {
 
-	private static final Logger LOGGER = LogManager.getLogger(Semafor.class);
+	private static final Logger LOGGER = LogManager.getLogger(Semaphore.class);
 
 	private boolean red = false;
 	private boolean yellow = false;
@@ -47,25 +47,25 @@ public abstract class Semafor implements PropertyChangeListener {
 	public void propertyChange(PropertyChangeEvent evt) {
 		@SuppressWarnings("unchecked")
 		Map<Integer, Integer> newStepConfigurationMap = (Map<Integer, Integer>) evt.getNewValue();
-		Integer colourId = newStepConfigurationMap.get(getSemaforType().getId());
+		Integer colourId = newStepConfigurationMap.get(getSemaphoreType().getId());
 		populateLightColours(colourId);
-		LOGGER.info("Applying colours " + getSemaforType().name() + "-" + getSemaforName() + ", " + toString());
+		LOGGER.info("Applying colours " + getSemaphoreType().name() + "-" + getSemaphoreName() + ", " + toString());
 	}
 
-	abstract SemaforType getSemaforType();
+	abstract SemaphoreType getSemaphoreType();
 
-	abstract String getSemaforName();
+	abstract String getSemaphoreName();
 
 	public String toString() {
 		return ReflectionToStringBuilder.toString(this);
 	}
 
-	public void accept(SemaforWatch v) {
+	public void accept(SemaphoreWatch v) {
 		v.visit(this);
 	}
 
 	public String getNameWithColour() {
-		return getSemaforName() + " : " + getColourName();
+		return getSemaphoreName() + " : " + getColourName();
 	}
 
 	private void populateLightColours(Integer colourId) {

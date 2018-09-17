@@ -17,17 +17,17 @@ public class StartUpInit {
 	private ProgramConfiguration programConfiguration;
 	private CurrentProgramSetUp currentProgramSetUp;
 	private LightManager lightManager;
-	private SemaforRegistry semaforRegistry;
+	private SemaphoreRegistry semaphoreRegistry;
 
 	@Autowired
 	public StartUpInit(ProgramService programService, ProgramConfiguration programConfiguration,
-			CurrentProgramSetUp currentProgramSetUp, LightManager lightManager, SemaforRegistry semaforRegistry) {
+			CurrentProgramSetUp currentProgramSetUp, LightManager lightManager, SemaphoreRegistry semaphoreRegistry) {
 		super();
 		this.programService = programService;
 		this.programConfiguration = programConfiguration;
 		this.currentProgramSetUp = currentProgramSetUp;
 		this.lightManager = lightManager;
-		this.semaforRegistry = semaforRegistry;
+		this.semaphoreRegistry = semaphoreRegistry;
 	}
 
 	@PostConstruct
@@ -36,7 +36,7 @@ public class StartUpInit {
 		programConfiguration.setProgramSchedule(programService.loadSchedule());
 		currentProgramSetUp.setNextProgram(programConfiguration.getProgramById(Integer.valueOf(1)));
 		currentProgramSetUp.setCurrentProgram(programConfiguration.getProgramById(Integer.valueOf(1)));
-		semaforRegistry.registerSemafors();
+		semaphoreRegistry.registerSemaphores();
 		lightManager.manageLight();
 	}
 

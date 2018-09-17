@@ -3,14 +3,14 @@ package com.iwona.trafficlights.config.startupinit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.iwona.trafficlights.app.dto.semafor.SM11;
-import com.iwona.trafficlights.app.dto.semafor.SM12;
-import com.iwona.trafficlights.app.dto.semafor.SS21;
-import com.iwona.trafficlights.app.dto.semafor.SS22;
+import com.iwona.trafficlights.app.dto.semaphore.SM11;
+import com.iwona.trafficlights.app.dto.semaphore.SM12;
+import com.iwona.trafficlights.app.dto.semaphore.SS21;
+import com.iwona.trafficlights.app.dto.semaphore.SS22;
 import com.iwona.trafficlights.app.manager.LightManager;
 
 @Component
-public class SemaforRegistry {
+public class SemaphoreRegistry {
 
 	private final LightManager lightManager;
 	private final SM11 sm11;
@@ -19,7 +19,7 @@ public class SemaforRegistry {
 	private final SS22 ss22;
 
 	@Autowired
-	public SemaforRegistry(LightManager lightManager, SM11 sm11, SM12 sm12, SS21 ss21, SS22 ss22) {
+	public SemaphoreRegistry(LightManager lightManager, SM11 sm11, SM12 sm12, SS21 ss21, SS22 ss22) {
 		super();
 		this.lightManager = lightManager;
 		this.sm11 = sm11;
@@ -28,7 +28,7 @@ public class SemaforRegistry {
 		this.ss22 = ss22;
 	}
 
-	public void registerSemafors() {
+	public void registerSemaphores() {
 		lightManager.addPropertyChangeListener(sm11);
 		lightManager.addPropertyChangeListener(sm12);
 		lightManager.addPropertyChangeListener(ss21);

@@ -12,14 +12,14 @@
 		<File name="TrafficLightFileAppender" fileName="logs/trafficLights.log">
 			<PatternLayout pattern="${LOG_PATTERN}" />
 		</File>
-		<File name="SemaforVisitorFileAppender" fileName="logs/semaforVisitor.log">
+		<File name="SemaphoreVisitorFileAppender" fileName="logs/semaphoreVisitor.log">
 			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS}| %m%n"/>
 		</File>
 	</Appenders>
 	<Loggers>
-		<Logger name="com.iwona.trafficlights.app.scheduler.SemaforVisitor" level="info" additivity="false">
+		<Logger name="com.iwona.trafficlights.app.scheduler.SemaphoreVisitor" level="info" additivity="false">
 			<AppenderRef ref="ConsoleAppender" />
-			<AppenderRef ref="SemaforVisitorFileAppender" />
+			<AppenderRef ref="SemaphoreVisitorFileAppender" />
 		</Logger>
 		
 		<Logger name="com.iwona.trafficlights" level="info" additivity="false">

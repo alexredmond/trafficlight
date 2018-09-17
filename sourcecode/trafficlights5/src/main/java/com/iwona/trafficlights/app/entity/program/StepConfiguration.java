@@ -20,7 +20,7 @@ public class StepConfiguration {
 	@Column(name = "STEP_ID")
 	private Integer stepId;
 	@Column(name = "SEMAFOR_TYPE_ID")
-	private Integer semaforTypeId;
+	private Integer semaphoreTypeId;
 	@Column(name = "COLOUR_ID")
 	private Integer colourId;
 
@@ -40,12 +40,12 @@ public class StepConfiguration {
 		this.stepId = stepId;
 	}
 
-	public Integer getSemaforTypeId() {
-		return semaforTypeId;
+	public Integer getSemaphoreTypeId() {
+		return semaphoreTypeId;
 	}
 
-	public void setSemaforTypeId(Integer semaforTypeId) {
-		this.semaforTypeId = semaforTypeId;
+	public void setSemaphoreTypeId(Integer semaphoreTypeId) {
+		this.semaphoreTypeId = semaphoreTypeId;
 	}
 
 	public Integer getColourId() {

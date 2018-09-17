@@ -51,7 +51,7 @@ public class ProgamServiceImpl implements ProgramService {
 				Map<Integer, Integer> stepConfigurationMap = new HashMap<>();
 				step.setStepConfigurationMap(stepConfigurationMap);
 				for (StepConfiguration stepConfiguration : step.getStepConfiguration()) {
-					stepConfigurationMap.put(stepConfiguration.getSemaforTypeId(), stepConfiguration.getColourId());
+					stepConfigurationMap.put(stepConfiguration.getSemaphoreTypeId(), stepConfiguration.getColourId());
 				}
 			}
 		}
