@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 @Entity
-@Table(name = "STEP_CONFIG", schema = "GLOBOFORCE")
+@Table(name = "STEP_CONFIG", schema = "TRAFFICLIGHTS")
 public class StepConfiguration {
 
 	@Id

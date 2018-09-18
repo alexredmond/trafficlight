@@ -18,7 +18,7 @@ import javax.persistence.Transient;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 @Entity
-@Table(name = "PROGRAM_STEPS", schema = "GLOBOFORCE")
+@Table(name = "PROGRAM_STEPS", schema = "TRAFFICLIGHTS")
 public class ProgramSteps {
 
 	@Id
