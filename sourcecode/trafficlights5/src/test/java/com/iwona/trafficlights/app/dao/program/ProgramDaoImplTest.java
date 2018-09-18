@@ -46,7 +46,6 @@ public class ProgramDaoImplTest {
 	public void setUp() {
 		programList = new ArrayList<>();
 		MockitoAnnotations.initMocks(this);
-
 	}
 
 
