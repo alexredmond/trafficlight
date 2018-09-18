@@ -11,3 +11,5 @@ sourcecode/trafficlights5/.classpath
 sourcecode/trafficlights5/.project
 sourcecode/trafficlights5/logs
 sourcecode/trafficlights5/.gitignore
+
+h2_database/dbcontent.mv.db
