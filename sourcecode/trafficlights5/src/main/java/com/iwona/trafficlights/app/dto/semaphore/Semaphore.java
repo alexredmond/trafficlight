@@ -56,6 +56,7 @@ public abstract class Semaphore implements PropertyChangeListener {
 
 	abstract String getSemaphoreName();
 
+	@Override
 	public String toString() {
 		return ReflectionToStringBuilder.toString(this);
 	}
