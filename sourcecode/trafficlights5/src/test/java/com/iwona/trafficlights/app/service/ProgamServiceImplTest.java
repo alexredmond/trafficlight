@@ -1,6 +1,7 @@
 package com.iwona.trafficlights.app.service;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -14,12 +15,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import com.iwona.trafficlights.app.dao.program.ProgramDao;
-import com.iwona.trafficlights.app.dto.configuration.CurrentProgramSetUp;
-import com.iwona.trafficlights.app.dto.configuration.ProgramConfiguration;
 import com.iwona.trafficlights.app.entity.program.Program;
 import com.iwona.trafficlights.app.entity.program.ProgramSteps;
 import com.iwona.trafficlights.app.entity.program.StepConfiguration;
-import com.iwona.trafficlights.app.scheduler.ProgramScheduler;
 
 public class ProgamServiceImplTest {
 
